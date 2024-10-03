@@ -1,0 +1,315 @@
+/* Main container styling */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px; /* Reduced padding */
+    background-color: #f0f2f5;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 80px;
+  }
+  
+  /* Form-row layout for inputs */
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Adjusted spacing between inputs */
+    margin-bottom: 15px;
+  }
+  
+  /* Half-width input styling */
+  .half-width {
+    flex: 1;
+  }
+  
+  /* General input styling */
+  input[type="text"],
+  input[type="date"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px; /* Reduced padding */
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px; /* Reduced font size */
+    background-color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Input hover and focus states */
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  input[type="number"]:focus {
+    outline: none;
+    border-color: #02066F;
+    box-shadow: 0 0 6px rgba(2, 6, 111, 0.25);
+  }
+  
+  /* Label styling */
+  label {
+    line-height: 30px;
+    font-weight: 600;
+    color: #02066F;
+  }
+
+/* Styling for Invoice Items heading */
+.invoice-items-heading {
+    font-size: 28px; /* Increased font size */
+    margin: 20px 0; /* Spacing above and below */
+    color: #02066F; /* Primary color for the heading */
+    text-align: center; /* Centered text */
+    font-weight: 700; /* Bold text */
+    letter-spacing: 1px; /* Slight letter spacing */
+    text-transform: uppercase; /* Uppercase letters for emphasis */
+    background-color: #e7eaf2; /* Light background color for contrast */
+    padding: 8px; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  /* Hover effect for heading */
+  .invoice-items-heading:hover {
+    transform: translateY(-2px); /* Slight upward movement on hover */
+    color: #0309A0; /* Darker shade on hover */
+  }
+  
+  
+  /* Invoice Items Table Styling */
+  .invoice-items-container {
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  
+  .invoice-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+  }
+  
+  .invoice-items-table th,
+  .invoice-items-table td {
+    padding: 10px; /* Reduced padding */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .invoice-items-table th {
+    background-color: #02066F;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  .invoice-items-table td {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .invoice-items-table tr:nth-child(even) {
+    background-color: #f9f9ff;
+  }
+  
+  .invoice-items-table tr:hover {
+    background-color: #ececff;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Table button */
+  .remove-btn  {
+    background-color: #f44336;
+    padding: 6px 12px; /* Adjusted padding */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .invoice-item button:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+  }
+  
+  /* Add Item Button */
+   .edit-add-item-btn {
+    background-color: green;
+    color: white;
+    padding: 10px; /* Adjusted padding */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button.add-item-btn:hover {
+    background-color: #0309A0;
+    transform: translateY(-2px);
+  }
+  
+  /* General button styling */
+  button {
+
+    color: white;
+    padding: 10px; /* Adjusted padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Invoice summary section input styling */
+  input[type="text"]:read-only {
+    background-color: #f3f3f3;
+    color: #333;
+    border: 1px solid #ccc;
+    font-weight: bold;
+  }
+  
+  /* Generate Invoice button */
+  button.generate-invoice-btn {
+    background-color: #02066F;
+    margin-top: 20px;
+    padding: 12px 0; /* Adjusted padding */
+    font-size: 18px;
+  }
+  
+  button.generate-invoice-btn:hover {
+    background-color: #0309A0;
+    transform: translateY(-2px);
+  }
+
+  .addItem-btn{
+    background-color: green;
+    margin-bottom: 10px;
+  }
+.Invoice-Gen-Btn {
+  margin-top: 15px;
+  background: linear-gradient(90deg, #02066F, #4C6EF5); /* Gradient from dark blue to lighter blue */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding for better touch area */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  justify-content: center;
+}
+
+/* Hover effect for the button */
+.Invoice-Gen-Btn:hover {
+  background: linear-gradient(90deg, #4C6EF5, #02066F); /* Reverse the gradient on hover */
+  transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+.update-invoice-btn{
+    margin-top: 15px;
+    background: linear-gradient(90deg, #02066F, #4C6EF5);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+
+  
+  /* Media Queries */
+  
+  /* Mobile devices (up to 480px) */
+  @media (max-width: 480px) {
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .half-width {
+      width: 100%;
+    }
+  
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+      font-size: 14px;
+      padding: 8px; /* Further reduced padding */
+    }
+  
+    .dynamicInput{
+      width: 150px !important;
+    }
+    button {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px; /* Adjusted padding */
+    }
+  
+    .invoice-items-heading {
+      font-size: 22px; /* Reduced font size for mobile */
+    }
+  }
+  
+  /* Tablets (481px to 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .half-width {
+      width: 100%;
+    }
+  
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+      font-size: 15px;
+      padding: 9px; /* Reduced padding */
+    }
+  
+    button {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px; /* Adjusted padding */
+    }
+  
+    .invoice-items-heading {
+      font-size: 24px; /* Reduced font size for tablets */
+    }
+  }
+  
+  /* Laptops (769px and above) */
+  @media (min-width: 769px) {
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .half-width {
+      width: calc(50% - 10px); /* Keep half width with some spacing */
+    }
+  
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+      font-size: 16px; /* Default font size */
+      padding: 10px; /* Default padding */
+    }
+  
+    .invoice-items-heading {
+      font-size: 26px; /* Default font size */
+    }
+  }
+  
+  /* Animation for smooth transitions */
+  .invoice-items-table tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  button, .invoice-item button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  

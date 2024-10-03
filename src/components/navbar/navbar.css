@@ -1,0 +1,141 @@
+/* Basic styles for navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 20px; /* Reduced padding for a sleeker look */
+    background-color: #02066F;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo h2 {
+    font-size: 22px; /* Slightly smaller font size */
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+  }
+  
+  .logo h2:hover {
+    color: #FFD700; /* Gold color on hover */
+  }
+  
+  /* Styling the links in the navbar */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Reduced gap for more compact layout */
+  }
+  
+  .nav-links li {
+    position: relative;
+  }
+  
+  .nav-links li a {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    padding: 8px 12px; /* Slightly reduced padding */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease;
+    border-radius: 4px;
+  }
+  
+  .nav-links li a:hover {
+    color: #FFD700;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle white hover effect */
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #FFD700; /* Gold underline effect */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+  
+  /* Menu icon (for mobile) */
+  .menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-icon:hover {
+    transform: rotate(90deg);
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #02066F;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 87%;
+
+      justify-content: center;
+ 
+      text-align: center;
+      gap: 0px;
+      transition: all 0.3s ease;
+    }
+  
+    .nav-links.active {
+      display: flex;
+      animation: slideIn 0.4s forwards;
+    }
+  
+    @keyframes slideIn {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links li {
+      padding: 10px 0;
+    }
+  }
+  
+  /* Animations */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .navbar {
+    animation: slideDown 0.5s ease-in-out;
+  }
+  

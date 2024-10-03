@@ -1,0 +1,204 @@
+/* General container styling */
+.view-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  h3 {
+    text-align: center;
+    color: #02066F; /* Main heading color */
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  /* Table styling */
+  .invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .invoice-table th,
+  .invoice-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    transition: background-color 0.3s;
+  }
+  
+  /* Header styling */
+  .invoice-table th {
+    background-color: #02066F; /* Header background color */
+    color: #ffffff; /* Header text color */
+    font-weight: bold;
+    /* text-transform: uppercase; */
+  }
+  
+  /* List styling for items */
+  .invoice-table ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .invoice-table ul li {
+    margin: 5px 0;
+  }
+  
+  /* Button styling */
+  .action-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .view-btn {
+    color: #007bff; /* Blue color for view */
+  }
+  
+  .edit-btn {
+    color: #28a745; /* Green color for edit */
+  }
+  
+  .delete-btn {
+    color: #dc3545; /* Red color for delete */
+  }
+  
+  .action-btn:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  /* Row hover effect */
+  .invoice-table tr:hover {
+    background-color: #f0f0f0; /* Light gray hover effect */
+  }
+  
+  /* Additional cell styling */
+  .invoice-table td {
+    transition: background-color 0.3s;
+  }
+  
+  .invoice-table th,
+  .invoice-table td {
+    border-bottom: 2px solid #02066F; /* Underline effect */
+  }
+
+  /* Search Bar Styling */
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .search-bar:focus {
+    border-color: #02066F; /* Focus border color */
+  }
+  /* Pagination Styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .page-button {
+    border: none;
+    background-color: #02066F; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .page-button:hover {
+    background-color: #0a2e80; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .page-button.active {
+    background-color: #0a2e80; /* Active button color */
+  }
+
+/* Export Button Styling */
+.export-container {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+  
+  .export-btn {
+    background-color: #02066F; /* Background color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .export-btn:hover {
+    background-color: #0a2e80; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+    
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    h3 {
+      font-size: 24px; /* Adjust heading size */
+    }
+  
+    .invoice-table {
+      font-size: 14px; /* Smaller font for table */
+    }
+  
+    .invoice-table th,
+    .invoice-table td {
+      padding: 10px; /* Adjust padding */
+    }
+  
+    /* Enable horizontal scrolling */
+    .invoice-table-container {
+      overflow-x: auto; /* Add horizontal scrolling */
+      display: block; /* Make container block-level */
+      white-space: normal; /* Prevent line breaks */
+    }
+  }
+  
+  /* Tablet adjustments */
+  @media (max-width: 1024px) {
+    .invoice-table th,
+    .invoice-table td {
+      padding: 12px; /* Slightly reduce padding */
+    }
+  
+    h3 {
+      font-size: 26px; /* Slightly adjust heading size */
+    }
+  
+    .action-btn {
+      margin: 0 -3px; /* Adjust button margin */
+    }
+  }
+  

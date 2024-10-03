@@ -1,0 +1,33 @@
+/* Simple Footer CSS */
+.footer {
+    background-color: #02066F; /* Your primary color */
+    color: white;
+    text-align: center;
+    padding: 8px 10px; /* Adjusted padding for better mobile view */
+    font-size: 18px; /* Default font size */
+    position: fixed; /* Changed to fixed */
+    bottom: 0; /* Position it at the bottom of the viewport */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+  
+}
+  
+.footer p {
+    margin: 0;
+    overflow-wrap: break-word; /* Ensure text breaks if it's too long */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 14px; /* Slightly smaller font size on mobile */
+        padding: 10px 5px; /* Adjust padding for mobile */
+    }
+}
+  
+@media (max-width: 480px) {
+    .footer {
+        font-size: 12px; /* Even smaller font size for very small screens */
+        padding: 10px; /* Uniform padding */
+    }
+}
